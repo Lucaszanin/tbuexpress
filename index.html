@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TBU EXPRESS</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="caminhodoarquivo/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="navigation">
+      <div class="wrapper">
+        <a class="logo" href="#home">
+          <img src="./assets/logo.png" alt="" height="50" />
+        </a>
+
+        <div class="menu">
+          <ul>
+            <li>
+              <a onclick="closeMenu()" href="#home">Início</a>
+            </li>
+            <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
+            <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
+          </ul>
+
+          <a class="button" onclick="closeMenu()" href="#contact"
+            >Entre em contato</a
+          >
+
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://instagram.com/maykbrito"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 6.49997H17.51"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://facebook.com/maykbrito">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://youtube.com/maykbrito">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          onclick="openMenu()"
+          class="open-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 20H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 12H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18 28L30 28"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          aria-expanded="true"
+          aria-label="Fechar menu"
+          onclick="closeMenu()"
+          class="close-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 10L10 30M10 10L30 30"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <section id="home">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>Seja Bem Vindo ao TBU EXPRESS 👋</h4>
+            <h1>Facilitando suas compras online no Mercado Livre.</h1>
+          </header>
+
+          <div class="content">
+            <p>
+              Na TBU EXPRESS, estamos comprometidos em tornar sua experiência de
+              compras online no Mercado Livre simples, intuitiva e eficiente.
+              Com uma ampla seleção de produtos, entrega rápida e um processo de
+              compra descomplicado, estamos aqui para simplificar sua jornada de
+              compras online. Confie em nós para uma experiência de compra no
+              Mercado Livre sem preocupações.
+            </p>
+            <a class="button" href="#contact">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8337 11.6667C13.667 11.5833 12.5837 11.0833 12.417 11C12.2503 10.9167 12.0837 10.9167 11.917 11.0833C11.7503 11.25 11.417 11.75 11.2503 11.9167C11.167 12.0833 11.0003 12.0833 10.8337 12C10.2503 11.75 9.66699 11.4167 9.16699 11C8.75033 10.5833 8.33366 10.0833 8.00033 9.58334C7.91699 9.41668 8.00033 9.25001 8.08366 9.16668C8.16699 9.08334 8.25033 8.91668 8.41699 8.83334C8.50033 8.75001 8.58366 8.58334 8.58366 8.50001C8.66699 8.41668 8.66699 8.25001 8.58366 8.16668C8.50033 8.08334 8.08366 7.08334 7.91699 6.66668C7.83366 6.08334 7.66699 6.08334 7.50033 6.08334C7.41699 6.08334 7.25033 6.08334 7.08366 6.08334C6.91699 6.08334 6.66699 6.25001 6.58366 6.33334C6.08366 6.83334 5.83366 7.41668 5.83366 8.08334C5.91699 8.83334 6.16699 9.58334 6.66699 10.25C7.58366 11.5833 8.75033 12.6667 10.167 13.3333C10.5837 13.5 10.917 13.6667 11.3337 13.75C11.7503 13.9167 12.167 13.9167 12.667 13.8333C13.2503 13.75 13.7503 13.3333 14.0837 12.8333C14.2503 12.5 14.2503 12.1667 14.167 11.8333C14.167 11.8333 14.0003 11.75 13.8337 11.6667ZM15.917 4.08334C12.667 0.833344 7.41699 0.833344 4.16699 4.08334C1.50033 6.75001 1.00033 10.8333 2.83366 14.0833L1.66699 18.3333L6.08366 17.1667C7.33366 17.8333 8.66699 18.1667 10.0003 18.1667C14.5837 18.1667 18.2503 14.5 18.2503 9.91668C18.3337 7.75001 17.417 5.66668 15.917 4.08334ZM13.667 15.75C12.5837 16.4167 11.3337 16.8333 10.0003 16.8333C8.75033 16.8333 7.58366 16.5 6.50033 15.9167L6.25033 15.75L3.66699 16.4167L4.33366 13.9167L4.16699 13.6667C2.16699 10.3333 3.16699 6.16668 6.41699 4.08334C9.66699 2.00001 13.8337 3.08334 15.8337 6.25001C17.8337 9.50001 16.917 13.75 13.667 15.75Z"
+                  fill="white"
+                />
+              </svg>
+
+              Entre em contato
+            </a>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="./assets/ecommerce.png"
+            alt="Mulher negra vestindo moletom verde com as duas mãos no peito e sorrindo"
+          />
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <h3>+100</h3>
+            <p>Clientes Satisfeitos</p>
+          </div>
+
+          <div class="stat">
+            <h3>+95%</h3>
+            <p>Avaliações Positivas</p>
+          </div>
+
+          <div class="stat">
+            <h3>+1</h3>
+            <p>Anos de experiência no Mercado Livre</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrapper">
+        <header>
+          <h4>Serviços</h4>
+          <h2>Explore nossos serviços exclusivos!</h2>
+        </header>
+
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <div class="circle-icon">
+                <svg
+                  fill="#c4c8c7"
+                  stroke="#c4c8c7"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 256 160"
+                  enable-background="new 0 0 256 160"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M64.54,111.46c-12.78,0-23.11,10.34-23.11,23.11c0,12.78,10.33,23.12,23.11,23.12c12.77,0,23.11-10.34,23.11-23.12
+             C87.65,121.8,77.31,111.46,64.54,111.46z M64.54,143.43c-4.85,0-8.85-4-8.85-8.86c0-4.85,4-8.85,8.85-8.85s8.85,4,8.85,8.85
+             C73.39,139.43,69.39,143.43,64.54,143.43z M210.04,110.48c-12.77,0-23.11,10.33-23.11,23.11c0,12.77,10.34,23.11,23.11,23.11
+             c12.78,0,23.12-10.34,23.12-23.11C233.16,120.81,222.82,110.48,210.04,110.48z M210.04,142.44c-4.85,0-8.85-4-8.85-8.85
+             c0-4.85,4-8.85,8.85-8.85c4.86,0,8.86,4,8.86,8.85C218.9,138.44,214.9,142.44,210.04,142.44z M2,2v119.44c0,4.48,3.52,8.56,8,8.56
+             h22c0.92,0,1.83-1.16,2-2c2.52-14.46,15.33-24.44,30.54-24.44s27.82,10.02,30.34,24.48c0.17,0.93,1.2,1.96,2.12,1.96h33V2H2z
+              M64.77,89.29c-17.29,0-31.36-14.07-31.36-31.36c0-16.07,12.14-29.35,27.73-31.15v-3.97H56.8v-7.52h16.48v7.52h-4.63v3.99
+             c3.49,0.44,6.8,1.44,9.84,2.92l2.64-4.18l6.35,4l-2.68,4.27c6.92,5.75,11.34,14.43,11.34,24.12C96.14,75.22,82.07,89.29,64.77,89.29
+             z M64.77,34.07c-13.15,0-23.85,10.7-23.85,23.86c0,13.15,10.7,23.85,23.85,23.85c13.16,0,23.86-10.7,23.86-23.85
+             C88.63,44.77,77.93,34.07,64.77,34.07z M64.9,57.78V38.42c10.67,0.05,19.25,8.7,19.36,19.36H64.9z M252,113h-5V91
+             c0-7.4-5.52-13-13-13h-24c-0.5,0-1.1-0.27-1.44-0.6l-37.4-36.41c-1.68-1.68-3.72-2.91-6.16-2.99h-27v92h40c0.92,0,1.83-1.16,2-2
+             c2.52-14.46,14.83-25.43,30.04-25.43c15.22,0,27.82,11.01,30.34,25.47c0.17,0.93,1.7,1.96,2.62,1.96h2c4.79,0,9-4.31,9-9.02v-6.22
+             C254,113.84,253.01,113,252,113z M191,78h-41c-1.01,0-2-0.99-2-2l-0.04-25.85c0-1.01,1.03-2.15,2.04-2.15h13
+             c0.5,0,1.52,0.55,1.94,0.89L192,75C193.01,76.26,192.6,78,191,78z"
+                  />
+                </svg>
+              </div>
+              <h3>Entrega Expressa</h3>
+              <p>
+                Garantimos entregas rápidas e eficientes para que você receba
+                seus produtos rapidamente, com a mesma confiabilidade que você
+                encontra no Mercado Livre.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="circle-icon">
+                <svg
+                  fill="#c4c8c7"
+                  stroke="#c4c8c7"
+                  width="28"
+                  height="28"
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 502.626 502.626"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <g>
+                      <g>
+                        <path
+                          d="M422.251,180.181C417.936,79.877,343.215,0,251.345,0C159.454,0,84.711,79.877,80.418,180.159
+                     c-13.439,3.581-23.361,15.682-23.361,30.199v78.065c0,17.321,14.021,31.364,31.385,31.364s31.407-14.021,31.407-31.364h0.022
+                     v-6.04c14.841,69.091,50.799,158.567,131.474,158.567c80.632,0,116.612-89.411,131.474-158.502v5.975
+                     c0,13.827,9.017,25.41,21.398,29.595c-0.884,15.811-9.448,99.355-91.093,134.235c-5.112-3.171-11.325-4.228-17.494-2.028
+                     l-35.915,13.331c-10.44,3.861-15.768,15.488-11.929,25.863c3.904,10.462,15.466,15.79,25.928,11.972l35.915-13.309
+                     c7.83-2.891,12.791-10.138,13.158-17.947c91.46-40.445,100.843-136.974,101.749-152.268
+                     c12.166-4.249,21.032-15.747,21.032-29.444v-78.065C445.59,195.863,435.646,183.74,422.251,180.181z M251.345,59.557
+                     c-71.421,0-130.266,56.71-139.434,130.137c-2.438-2.761-5.328-5.026-8.564-6.795c2.977-87.513,68.013-157.445,147.997-157.445
+                     c79.963,0,144.999,69.932,147.976,157.445c-3.214,1.769-6.105,4.034-8.542,6.752C381.611,116.245,322.766,59.557,251.345,59.557z
+                     "
+                        />
+                      </g>
+                    </g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                  </g>
+                </svg>
+              </div>
+
+              <h3>Suporte Contínuo</h3>
+              <p>
+                Estamos disponíveis 24/7 para ajudá-lo com qualquer dúvida ou
+                problema, fornecendo suporte contínuo e confiável, da mesma
+                forma que você espera do Mercado Livre.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="circle-icon">
+                <svg
+                  fill="#c4c8c7"
+                  stroke="#c4c8c7"
+                  width="28"
+                  height="28"
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 310.277 310.277"
+                  xml:space="preserve"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g>
+                      <path
+                        fill="#c4c8c7"
+                        stroke="#c4c8c7"
+                        d="M155.139,0C69.598,0,0,69.598,0,155.139c0,85.547,69.598,155.139,155.139,155.139 c85.547,0,155.139-69.592,155.139-155.139C310.277,69.598,240.686,0,155.139,0z M144.177,196.567L90.571,142.96l8.437-8.437 l45.169,45.169l81.34-81.34l8.437,8.437L144.177,196.567z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <h3>Qualidade Assegurada</h3>
+              <p>
+                Oferecemos produtos de alta qualidade, garantindo sua satisfação
+                total em cada compra, com o mesmo padrão de qualidade confiável
+                que você encontra ao comprar no Mercado Livre.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="circle-icon">
+                <svg
+                  fill="#c4c8c7"
+                  stroke="#c4c8c7"
+                  width="30"
+                  height="30"
+                  version="1.1"
+                  id="_x32_"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 550 500"
+                  xml:space="preserve"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <style type="text/css">
+                      .st0 {
+                        fill: #c4c8c7;
+                      }
+                    </style>
+                    <g>
+                      <path
+                        class="st0"
+                        d="M223.455,453.803c-5.072-3.432-11.247-5.44-17.804-5.44c-4.366,0-8.57,0.89-12.378,2.507 c-5.726,2.418-10.563,6.446-13.996,11.518c-3.426,5.058-5.439,11.232-5.439,17.789c0,4.367,0.896,8.579,2.507,12.394 c2.418,5.719,6.446,10.563,11.518,13.989c5.065,3.426,11.232,5.447,17.789,5.44c4.366,0.007,8.586-0.89,12.394-2.507 c5.719-2.426,10.556-6.439,13.981-11.512c3.433-5.072,5.447-11.246,5.44-17.804c0-4.366-0.882-8.571-2.499-12.378 C232.541,462.072,228.527,457.236,223.455,453.803z M217.479,485.177c-0.97,2.286-2.61,4.263-4.66,5.645 c-2.059,1.389-4.477,2.183-7.168,2.19c-1.794,0-3.455-0.36-4.984-1.007c-2.293-0.962-4.263-2.61-5.653-4.66 c-1.389-2.059-2.183-4.477-2.183-7.168c0-1.794,0.353-3.455,1-4.984c0.97-2.294,2.61-4.271,4.661-5.653 c2.058-1.389,4.469-2.183,7.159-2.19c1.801,0.007,3.47,0.36,4.991,1.007c2.286,0.97,4.271,2.602,5.653,4.66 c1.382,2.058,2.176,4.47,2.183,7.16C218.478,481.979,218.118,483.64,217.479,485.177z"
+                      ></path>
+                      <path
+                        class="st0"
+                        d="M397.941,453.803c-5.064-3.432-11.239-5.44-17.796-5.44c-4.367,0-8.572,0.89-12.386,2.507 c-5.727,2.418-10.564,6.446-13.989,11.518c-3.426,5.058-5.44,11.232-5.44,17.789c0,4.367,0.89,8.579,2.499,12.394 c2.426,5.719,6.447,10.563,11.519,13.989c5.065,3.426,11.24,5.447,17.797,5.44c4.366,0.007,8.578-0.89,12.394-2.507 c5.718-2.426,10.555-6.439,13.981-11.512c3.426-5.072,5.447-11.246,5.44-17.804c0-4.366-0.889-8.571-2.499-12.378 C407.034,462.072,403.014,457.236,397.941,453.803z M391.966,485.177c-0.963,2.286-2.602,4.263-4.661,5.645 c-2.058,1.389-4.469,2.183-7.159,2.19c-1.794,0-3.455-0.36-4.984-1.007c-2.294-0.962-4.278-2.61-5.66-4.66 c-1.382-2.059-2.176-4.477-2.176-7.168c0-1.794,0.353-3.455,1-4.984c0.97-2.294,2.602-4.271,4.66-5.653 c2.058-1.389,4.469-2.183,7.16-2.19c1.794,0.007,3.462,0.36,4.991,1.007c2.286,0.97,4.27,2.602,5.652,4.66 c1.382,2.058,2.176,4.47,2.184,7.16C392.965,481.979,392.612,483.64,391.966,485.177z"
+                      ></path>
+                      <path
+                        class="st0"
+                        d="M460.004,151.581c-4.381-5.351-10.938-8.468-17.862-8.468H346.03v-19.626h24.912h28.213l-17.627-22.031 l-70.524-88.21L300.403,0l-10.592,13.246l-70.531,88.21l-17.62,22.031h28.212h24.912v19.626H141.406l-10.233-35.166l-0.008-0.022 c-4.704-15.738-17.604-27.654-33.674-31.094l-36.754-7.88c-6.227-1.331-12.357,2.631-13.688,8.857 c-1.338,6.219,2.632,12.357,8.85,13.688l36.769,7.88c7.821,1.676,14.114,7.49,16.407,15.157l67.179,230.786 c-1.507,0.706-2.978,1.478-4.389,2.316c-7.233,4.315-13.048,10.372-16.951,17.444c-3.719,6.726-5.704,14.342-5.881,22.199h-0.036 v1.198h0.036c0.147,6.13,1.448,12.026,3.72,17.399c3.639,8.586,9.674,15.856,17.296,21.008c7.608,5.146,16.87,8.167,26.72,8.16 h216.085c6.366,0,11.526-5.16,11.526-11.526s-5.16-11.534-11.526-11.534H196.771c-3.447,0-6.667-0.684-9.614-1.933 c-4.425-1.867-8.218-5.013-10.887-8.968c-2.558-3.793-4.065-8.277-4.19-13.188c0.132-5.858,1.992-10.938,5.27-15.002 c1.705-2.102,3.808-3.94,6.351-5.462c2.499-1.5,5.47-2.683,8.931-3.433l217.202-35.357c14.194-2.315,25.471-13.158,28.344-27.249 l26.559-130.61l0.007-0.015c0.309-1.514,0.464-3.058,0.464-4.586C465.209,160.91,463.401,155.742,460.004,151.581z M332.468,237.387h-64.122V109.924h-38.474l70.531-88.202l70.539,88.202h-38.474V237.387z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <h3>Devoluções Sem Complicações</h3>
+              <p>
+                Nosso processo de devolução é simples e sem complicações,
+                assegurando que você tenha uma experiência tranquila de compra,
+                alinhada com a praticidade que você espera do Mercado Livre.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="circle-icon">
+                <svg
+                  fill="#c4c8c7"
+                  stroke="#c4c8c7"
+                  width="40"
+                  height="40"
+                  viewBox="-2.16 -2.16 28 28"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke-width="0.00024000000000000003"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#CCCCCC"
+                    stroke-width="0.24000000000000005"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g>
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        fill-rule="nonzero"
+                        d="M11 2l7.298 2.28a1 1 0 0 1 .702.955V7h2a1 1 0 0 1 1 1v2H9V8a1 1 0 0 1 1-1h7V5.97l-6-1.876L5 5.97v7.404a4 4 0 0 0 1.558 3.169l.189.136L11 19.58 14.782 17H10a1 1 0 0 1-1-1v-4h13v4a1 1 0 0 1-1 1l-3.22.001c-.387.51-.857.96-1.4 1.33L11 22l-5.38-3.668A6 6 0 0 1 3 13.374V5.235a1 1 0 0 1 .702-.954L11 2z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+
+              <h3>Pagamento Protegido</h3>
+              <p>
+                Utilizamos os métodos de pagamento mais seguros para proteger
+                suas informações financeiras e garantir transações seguras, em
+                conformidade com os padrões de segurança do Mercado Livre.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="circle-icon">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="-0.5 0 13 13"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#c4c8c7"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="Path_2"
+                      data-name="Path 2"
+                      d="M106.974,837h-12l2-11.031h1.989a1.98,1.98,0,0,1,3.96,0h2.051Zm-6-12.011c-1.042-.01-1.04.338-1.04.98h2.049C101.983,825.367,102.013,825,100.974,824.989ZM102.925,827v.994h-.943V827H99.933v.994h-.974V827H97.848l-1.75,9h9.719l-1.75-9ZM101,824c-.021,0-.041.005-.062.006s-.041-.006-.063-.006Z"
+                      transform="translate(-94.974 -824)"
+                      fill="#c4c8c7"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <h3>Amplas Opções de Produtos</h3>
+              <p>
+                Oferecemos uma ampla variedade de produtos para atender a todas
+                as suas necessidades de compras online, com a mesma diversidade
+                que você encontra ao explorar o Mercado Livre.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>Sobre nós</h4>
+            <h2>Conheça nossa história e nossa missão.</h2>
+          </header>
+
+          <div class="content">
+            <p>
+              Na TBU Express, nossa paixão por oferecer a melhor experiência de
+              compras online é o que nos impulsiona. Desde o nosso início, nos
+              dedicamos a simplificar e aprimorar cada aspecto da jornada de
+              compra dos nossos clientes. Com um compromisso inabalável com a
+              qualidade, a confiabilidade e a inovação, buscamos constantemente
+              superar as expectativas e fornecer soluções sob medida para cada
+              necessidade. Descubra mais sobre quem somos, nossa jornada até
+              aqui e como estamos moldando o futuro do comércio online.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="./assets/aboutImg.png"
+            alt="Doutor feliz segurando prancheta com pacientes"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h2>Entre em Contato Conosco Agora!</h2>
+          </header>
+
+          <div class="content">
+            <ul>
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                R. Dr. Emílio Ribas, 346
+              </li>
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M22 6L12 13L2 6"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                tbuexpress@gmail.com
+              </li>
+            </ul>
+
+            <a
+              class="button"
+              href="https://wa.me/5519993428915"
+              target="_blank"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z"
+                  fill="white"
+                />
+              </svg>
+
+              Entre em contato
+            </a>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="./assets/homem-negro-com-moletom-bege-mexendo-no-celular.png"
+            alt="Homem negro com moletom bege mexendo no celular e sorrindo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <div class="col-a">
+          <a class="logo" href="#home">
+            <img src="./assets/logo.png" alt="" height="50" />
+          </a>
+
+          <p>
+            ©2024 TBU EXPRESS. <br />
+            Todos os direitos reservados.
+          </p>
+        </div>
+
+        <div class="col-b">
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://instagram.com/maykbrito"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 6.49997H17.51"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://facebook.com/maykbrito">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://youtube.com/maykbrito">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <a id="backToTopButton" href="#home">
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="20" cy="20" r="20" fill="#00856F" />
+        <path
+          d="M20 27V13"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M13 20L20 13L27 20"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+
+    <!-- ScrollReaveal Lib -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
